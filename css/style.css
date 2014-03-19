@@ -1,0 +1,19 @@
+@font-face {
+  font-family:'kiwind';
+  src:url('../fonts/kiwind.eot');
+  src:url('../fonts/kiwind.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/kiwind.woff') format('woff'),
+       url('../fonts/kiwind.ttf')  format('truetype'),
+       url('../fonts/kiwind.svg#svgFontName') format('svg');
+}
+.button:hover{color:#FFF;text-decoration:none;}
+.menu{position:absolute;top:50%;left:50%;text-align:center;opacity:0;filter:alpha(opacity:0);z-index:-10;}
+.icon{font-size:50px;font-family:"kiwind";color:#FFF;cursor:pointer;}
+.menu .button{display:block;margin:20px 0;}
+
+/* book */
+.book-list .row{padding:20px 0;border-bottom:1px solid #EEE;}
+.book-list .book-thumb{text-align:center;}
+.book-list img{width:270px;height:350px;}
+.book-list dt{height:40px;line-height:40px;font-size:16px;}
+.book-list .brief{margin-bottom:10px;line-height:24px;}
