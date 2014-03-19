@@ -1,0 +1,35 @@
+<script type="text/javascript" src="<?php echo base_url('ckeditor/plugins/syntaxhighlighter/scripts/shCore.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('ckeditor/plugins/syntaxhighlighter/scripts/shAutoloader.js') ?>"></script>
+<link href="<?php echo base_url('ckeditor/plugins/syntaxhighlighter/styles/shCoreDefault.css') ?>" rel="stylesheet" type="text/css" />
+<?php 
+    $shl = "<script type='text/javascript'>";
+    $shl.= "SyntaxHighlighter.defaults['toolbar'] = false;";
+    $shl.= "SyntaxHighlighter.all();";
+    $shl.= "SyntaxHighlighter.autoloader(";
+    $shl.= "'as3  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushAS3.js')."',";
+    $shl.= "'js  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushJScript.js')."',";
+    $shl.= "'bash  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushBash.js')."',";
+    $shl.= "'cf  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushColdFusion.js')."',";
+    $shl.= "'csharp  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushCSharp.js')."',";
+    $shl.= "'cpp  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushCpp.js')."',";
+    $shl.= "'css  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushCss.js')."',";
+    $shl.= "'delphi  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushDelphi.js')."',";
+    $shl.= "'diff  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushDiff.js')."',";
+    $shl.= "'groovy  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushGroovy.js')."',";
+    $shl.= "'java  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushJava.js')."',";
+    $shl.= "'jfx  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushJavaFX.js')."',";
+    $shl.= "'perl  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushPerl.js')."',";
+    $shl.= "'php  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushPhp.js')."',";
+    $shl.= "'plain  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushPlain.js')."',";
+    $shl.= "'ps  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushPowerShell.js')."',";
+    $shl.= "'py  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushPython.js')."',";
+    $shl.= "'rails  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushRuby.js')."',";
+    $shl.= "'scala  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushScala.js')."',";
+    $shl.= "'sql  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushSql.js')."',";
+    $shl.= "'vb  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushVb.js')."',";
+    $shl.= "'xml  ".base_url('ckeditor/plugins/syntaxhighlighter/scripts/shBrushXml.js')."'";
+    $shl.=");";
+    $shl.= "</script>";
+    echo $shl;
+?>
+

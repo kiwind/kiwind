@@ -1,0 +1,24 @@
+<div class="sidebar">
+	<div class="logo"><a href="<?php echo site_url('blog') ?>"><img src="<?php echo base_url('images/blog-logo.png') ?>"/></a></div>
+	<div id="nav" class="nav">
+		<div class="nav-buoy"><span></span></div>
+		<ul class="menu">
+			<li <?php if($catid == 0): ?>class="cur"<?php endif; ?>><a href="<?php echo site_url('blog') ?>">首页</a></li>
+			<li class="cate <?php if($catid == 4): ?>cur<?php endif; ?>">
+				<a href="<?php echo site_url('blog/cat/4') ?>">博文</a>
+				<ul class="children">
+					<?php foreach($type as $titem): ?>
+					<li <?php if($titem->id == $catid): ?>class="cur"<?php endif; ?>><a href="<?php echo site_url('blog/cat/'.$titem->id) ?>"><?php echo $titem->title ?></a></li>
+					<?php endforeach; ?>
+				</ul>
+			</li>
+			<!-- <li><a href="<?php echo site_url('about') ?>">关于我</a></li> -->
+		</ul>
+	</div>
+	<div class="nav-search">
+		<form method="get" id="search" action="">
+			<button type="submit" id="J_Submit" class="submit iconfont" title="Search"></button>
+			<input type="text" maxlength="30" name="s" title="Type Keyword" id="J_Input" class="input sprites bg-ani" placeholder="">
+		</form>			
+	</div>
+</div>

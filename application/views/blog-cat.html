@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>博客-风的地盘</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="<?php echo base_url('css/common.css') ?>"/>
+<link rel="stylesheet" href="<?php echo base_url('css/blog.css') ?>"/>
+</head>
+<body>
+<?php $this->load->view('blog-sidebar.html'); ?>
+<div class="content index-content">
+	<ul class="posts clearfix">
+		<?php foreach($res as $post): ?>
+		<li data-id=<?php echo $post->id ?>>
+			<div class="brief">
+				<?php if($post->thumb != ""): ?>
+				<a href="<?php echo site_url('blog/article/'.$catid.'/'.$post->id) ?>"><img src="<?php echo base_url($post->thumb) ?>" alt="" /></a>
+				<?php else: ?>
+				<p><?php echo utf8_substr(strip_tags(htmlspecialchars_decode($post->content)),0,100,"...")?><a class="readmore" href="<?php echo site_url('blog/article/'.$catid.'/'.$post->id) ?>">更多&gt;</a></p>
+				<?php endif; ?>
+			</div>
+			<div class="title"><a href="<?php echo site_url('blog/article/'.$catid.'/'.$post->id) ?>"><?php echo $post->title ?></a></div>
+			<div class="extra">
+				<span class="date fl"><?php echo date("Y-m-d",$post->datetime) ?></span>
+				<div class="action fr">
+					<!-- <a class="good" href="#"><?php echo $post->good_count ?></a>
+					<a class="comment" href="#"><?php echo $post->comment_count ?></a> -->
+				</div>
+			</div>
+		</li>
+		<?php endforeach; ?>
+	</ul>
+	<div class="pages"><?php echo $pagebar; ?></div>
+</div>
+<?php $this->load->view('blog-footer.html'); ?>

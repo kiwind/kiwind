@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>博客-风的地盘</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="<?php echo base_url('css/common.css') ?>"/>
+<link rel="stylesheet" href="<?php echo base_url('css/blog.css') ?>"/>
+</head>
+<body>
+<?php $this->load->view('blog-sidebar.html'); ?>
+<div class="content">
+	<div class="content-article">
+		<div class="article-wrapper">
+			<div class="article">
+				<div class="a-brief">
+					<h1 class="f16 fwb"><?php echo $article->title ?></h1>
+					<p class="f12 c9">时间：<?php echo date("Y-m-d H:i:s",$article->datetime) ?></p>
+				</div>
+				<div class="a-detail">
+					<?php echo $article->content ?>
+				</div>
+				<a class="a-return f14" href="javascript:history.go(-1);">返回</a>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="pages pages-article">
+	    <div class="page-btn pre-page">
+	        
+	    </div>
+	    <div class="page-btn next-page">
+	        <a class="bg-ani" href="#">NEXT</a>
+	    </div>
+	</div> -->
+</div>
+<?php $this->load->view('blog-footer.html'); ?>

@@ -1,0 +1,39 @@
+<?php 
+	$CI=&get_instance();
+	$CI->load->model('mblog');
+	$link = $CI->mblog->getFriendlyLink();
+?>
+<div class="footer">
+	<div class="footer-wrapper clearfix">
+		<div class="col-1 col">
+			<div class="title">友情链接</div>
+			<ul class="heighted" id="J_LinksWrapper">
+				<?php foreach($link as $linkitem):?>
+				<li> 
+					<a href="<?php echo $linkitem->url?>" title="<?php echo $linkitem->title ?>" target="_blank"><?php echo $linkitem->name ?></a>
+				</li>	
+				<?php endforeach; ?>
+				<!-- <li>
+					<a href="http://blog.open.taobao.com/" target="_blank">淘宝开放平台</a>
+				</li>
+				<li>
+					<a href="http://ued.alipay.com/" target="_blank">支付宝UED</a>
+				</li> -->
+			</ul>
+		</div>
+		<div class="col-2 col">
+			<!-- <div class="title">热门标签</div>
+			<div class="hot-tags">
+				<a href="http://ued.taobao.org/blog/?tag=%e6%87%92%e6%87%92%e4%ba%a4%e6%b5%81%e4%bc%9a" class="tag-link-211" title="12 个话题" style="font-size: 12px;">懒懒交流会</a><i class="dian sprites"></i>
+			</div> -->
+		</div>
+		<div class="col-3 clearfix">
+			<p>Copyright © 2012 kiwind.cn. All rights reserved.</p>
+		</div>
+	</div>
+</div>
+<div id="goTop" class="gotop hide"><a class="bg-ani" href="javascript:void(0)"></a></div>
+<script type="text/javascript" src="<?php echo base_url('js/jquery.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('js/blog.js') ?>"></script>
+</body>
+</html>
