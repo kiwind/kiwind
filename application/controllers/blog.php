@@ -20,7 +20,7 @@
 	      	$config['prev_tag_close'] = '</div>';
 	      	$config['next_tag_open'] = '<div class="page-btn next-page">';
 	      	$config['next_tag_close'] = '</div>';
-	      	$this->blogpage->initialize($config);
+	      	$this->Blogpage->initialize($config);
 	      	$pagen = $this->uri->segment(3);
 	      	if($pagen==0)
 	      	{
@@ -36,7 +36,7 @@
 			$data = array('res'=>$res,
 						  'type'=>$this->mblog->getType(),
 						  'catid'=>0,
-						  'pagebar'=>$this->blogpage->create_links());
+						  'pagebar'=>$this->Blogpage->create_links());
 			$this->load->view('blog.html',$data);
 		}
 

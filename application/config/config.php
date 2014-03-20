@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/work/webapp/kiwind/trunk/home/';
+$config['base_url']	= 'http://localhost/work/kiwind/trunk/';
 
 /*
 |--------------------------------------------------------------------------
